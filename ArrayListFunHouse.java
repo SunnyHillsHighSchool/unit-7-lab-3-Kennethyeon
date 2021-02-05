@@ -33,12 +33,8 @@ public class ArrayListFunHouse
    //use a for loop to loop through each number in the given arrayList backwards(nums)
    for (int i = nums.size() - 1; i >=0; i--)
    {
-     //create arraylist called copy
-     ArrayList<Integer> copy = new ArrayList<Integer>();
-     //run getListOfFactors method and set it equal to copy
-     copy = ArrayListFunHouse.getListOfFactors(nums.get(i));
-     //if the size of copy is < 1 remove the number from nums
-     if (copy.size() < 1)
+     //if the size of the arraylist returned from running getListOfFactors for the nums.get(i) is < 1 remove the number from nums
+     if (ArrayListFunHouse.getListOfFactors(nums.get(i)).size() < 1)
      {
        nums.remove(i);
      }
